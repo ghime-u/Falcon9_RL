@@ -1,42 +1,49 @@
-Certainly! Here's the README.md written in Markdown syntax:
-
-```markdown
-# RocketLander: Reinforcement Learning-Based Rocket Landing Control System
+# Falcon 9 Rocket Landing with Reinforcement Learning
 
 ## Overview
-This repository is dedicated to the development and optimization of a Reinforcement Learning (RL)-based control system designed for the SpaceX Falcon 9 rocket lander. The primary objective is to achieve autonomous and precise landings on predefined target zones, with the overarching goal of reducing mission costs and enhancing the reusability of the rocket.
 
-## Motivation
-The impetus for this project is drawn from the remarkable strides made by SpaceX in the realm of reusable launch vehicles. This endeavor explores the integration of reinforcement learning to address the intricate challenges associated with rocket recycling. The continual pursuit of efficiency and cost-effectiveness within the aerospace industry propels the evolution of sophisticated control systems for reusable rockets.
+This repository presents the culmination of our research at Northeastern University, focusing on the development and optimization of a Reinforcement Learning (RL)-based control system for the SpaceX Falcon 9 rocket lander. The primary objective is to achieve autonomous and precise landings on designated target zones, with the ultimate goal of reducing mission costs and enhancing the reusability of space vehicles.
 
-## Dynamics and Challenges of the Environment
-### State Space
-In the Rocket Lander environment, crucial variables include the rocket's position, orientation, leg ground contact indicators, engine gimbal angle, and velocity. These parameters play a pivotal role in guiding the RL agent's decision-making process during the landing sequence.
+## Contents
 
-### Action Space
-The action space delineates the spectrum of actions available to the RL agent, encompassing adjustments to the gimbal, throttle control, and maneuvers using control thrusters. These actions empower the agent to exert influence over the rocket's trajectory and orientation.
+- **Code:** The repository houses implementations of three RL algorithms: Deep Deterministic Policy Gradient (DDPG), Proximal Policy Optimization (PPO), and Soft Actor-Critic (SAC). These algorithms are applied to the Rocket Lander environment, a physics-based simulation framework designed for studying the mechanics and dynamics of rocket landings.
 
-### Reward System
-The reward system serves as a guide for the RL agent's learning process, consisting of a foundational reward and nuanced shaping based on factors such as distance, speed, angle, and ground contact. Additional penalties are incorporated to strategically guide the agent towards achieving efficient and stable landings.
+- **RocketLander Environment:** Leveraging the Box2D physics engine within the OpenAI Gym interface, this simulation encompasses a comprehensive set of state variables, action spaces, and a reward system. The goal is to provide an accurate representation of the challenges and intricacies involved in landing a rocket.
 
+- **Documentation:** Detailed documentation covers the dynamics and challenges of the environment, state and action spaces, the reward system, and the physics simulation. It also includes related work, showcasing the advancements and current state-of-the-art in RL-based rocket landing.
 
+## Getting Started
 
+To dive into the project:
 
+1. Clone the repository:
 
-## Usage
-The repository includes code for training and testing the RL agent in the RocketLander environment. Users can explore diverse landing scenarios and control strategies by manipulating gimbal angles, throttle levels, and control thruster intensities.
+   ```bash
+   git clone https://github.com/ghime-u/Falcon9_RL.git
+cd Falcon9_RL
 
-## Dependencies
-- OpenAI Gym
-- Box2D Physics Engine
+## Results
 
-## How to Run
-1. Install dependencies using `pip install -r requirements.txt`.
-2. The repository contains SAC, PPO and DDPG with instructions
+Quantitative results for each RL algorithm are detailed in the documentation. A comparison table summarizes key metrics for DDPG, PPO, and SAC, providing insights into their learning rates, training steps, stability, and success rates.
 
 ## Acknowledgments
-This project is a result of research and development efforts aimed at advancing the field of autonomous rocket landing control systems. Acknowledgments to OpenAI Gym for the simulation interface and SpaceX for pioneering reusable rocket technology.
+
+We extend our gratitude to Phil Zhang for his invaluable RL tutorials and Sven Niederberger for the custom rocket landing environment based on OpenAI's LunarLander. The OpenAI Gym and the wider ML community have been instrumental in shaping our research.
+
+## References
+
+This repository builds upon existing research and implementations. Refer to the provided references for a deeper understanding of the RL algorithms and related work.
+
+## Contact
+
+For inquiries or further information, please contact:
+
+    Ravina Lad
+        Email: lad.ra@northeastern.edu
+
+    Utkarsh Ghime
+        Email: ghime.u@northeastern.edu
 
 ## License
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
-```
+
+This project is licensed under the MIT License. Feel free to use, modify, and distribute the code as per the terms of the license. We welcome collaboration and contributions from the community to advance the field of RL in rocket landing applications.
