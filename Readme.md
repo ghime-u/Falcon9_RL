@@ -20,7 +20,7 @@ To dive into the project:
 
    ```bash
    git clone https://github.com/ghime-u/Falcon9_RL.git
-cd Falcon9_RL
+   cd Falcon9_RL
 
 ## Results
 
